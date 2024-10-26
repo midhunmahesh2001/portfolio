@@ -1,0 +1,93 @@
+/* Projects.css */
+
+.main-container {
+    padding: 40px;
+    background-color: var(--primary-color);
+    text-align: center;
+  }
+  
+  .main-container h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .pro-item1, .pro-item2, .pro-item3 {
+    background-color: var(--primary-color);
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pro-item1:hover, 
+  .pro-item2:hover, 
+  .pro-item3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2980b9;
+    text-transform: uppercase;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .btn1 {
+    margin-top: 10px;
+  }
+  
+  button {
+    background-color: var(--fourth-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button a {
+    text-decoration: none;
+    background-color: var(--fourth-color);
+  }
+  
+  button:hover {
+    background-color: var(--secondary-color);
+    color: var(--fourth-color);
+  }
+  
+  @media (max-width: 768px) {
+    .main-container {
+      padding: 20px;
+    }
+  
+    .container {
+      grid-template-columns: 1fr;
+    }
+  
+    .pro-item1, .pro-item2, .pro-item3 {
+      width: 100%;
+    }
+  }
+  

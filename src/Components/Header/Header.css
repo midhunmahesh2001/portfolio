@@ -1,0 +1,39 @@
+.Container{
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header-item {
+    grid-area: 1 / 1 / 2 / 2;
+} 
+
+.Container .header-item h2{
+    font-size: 60px;
+    padding: 0 55px;
+}
+.Container .header-item p{
+    font-size: 18px;
+    width: 450px;
+    padding: 0 58px;
+}
+.header-btn{
+    padding: 50px 180px;
+    background-color: var(--primary-color);
+}
+.header-btn button{
+    padding: 20px 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: white;
+}
+.Container .header-item h2 span{
+    color: rgb(177, 116, 87);
+}
+
+.header-pic{
+    grid-area: 1 / 2 / 2 / 3;
+}
+.header-pic img{
+    width: 500px;
+}

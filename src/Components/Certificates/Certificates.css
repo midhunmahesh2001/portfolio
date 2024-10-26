@@ -1,0 +1,91 @@
+.cert-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .certificateList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+  }
+  
+  /* Main certificate - Larger size */
+  .mainCertificate {
+    grid-column: span 2;
+    position: relative;
+    overflow: hidden;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mainCertificate a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .mainCertificate img {
+    width: auto;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Other certificates */
+  .certificateItem {
+    flex: 1 1 calc(25% - 20px); /* Takes 25% width */
+    max-width: calc(25% - 20px);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .certificateItem img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effects */
+  .certificateItem:hover,
+  .mainCertificate:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .certificateItem:hover img,
+  .mainCertificate:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .mainCertificate {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  
+    .certificateItem {
+      flex: 1 1 calc(50% - 20px); /* Two items per row */
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .certificateItem {
+      flex: 1 1 100%; /* One item per row */
+      max-width: 100%;
+    }
+  }
+  

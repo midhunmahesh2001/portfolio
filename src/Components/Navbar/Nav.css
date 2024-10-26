@@ -1,0 +1,118 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: var(--fourth-color);
+    position: relative;
+  }
+  
+  .nav-img img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  
+  /* Menu Icon */
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: var(--fourth-color);
+    transition: 0.3s;
+  }
+  
+  /* Navbar Items */
+  .nav-items {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--fourth-color);
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--third-color);
+  }
+  
+  /* Hire Me Button */
+  .nav-btn button {
+    background-color: var(--fourth-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-btn button:hover {
+    background-color: var(--third-color);
+    color: var(--primary-color);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links,
+    .nav-btn {
+      display: none; /* Hide links and button initially */
+    }
+  
+    .menu-icon {
+      display: flex; /* Show only the bars */
+    }
+  
+    .navbar.open .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: var(--primary-color);
+      padding: 20px;
+    }
+  
+    .navbar.open .nav-btn {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .navbar.open .menu-icon .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .navbar.open .menu-icon .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .navbar.open .menu-icon .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+  
