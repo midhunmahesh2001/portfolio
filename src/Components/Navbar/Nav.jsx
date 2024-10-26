@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
-import logo from '../../assets/midhun mahesh.jpg';
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,10 +11,6 @@ function Nav() {
 
   return (
     <nav className={`navbar ${menuOpen ? 'open' : ''}`}>
-      <div className="nav-img">
-        <img src={logo} alt="Midhun Mahesh" />
-      </div>
-
       <div className="menu-icon" onClick={toggleMenu}>
         <div className="bar"></div>
         <div className="bar"></div>

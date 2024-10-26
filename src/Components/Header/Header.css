@@ -1,39 +1,112 @@
-.Container{
+
+.Container {
     background-color: var(--primary-color);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .header-item {
     grid-area: 1 / 1 / 2 / 2;
-} 
-
-.Container .header-item h2{
-    font-size: 60px;
-    padding: 0 55px;
 }
-.Container .header-item p{
+
+.Container .header-item h2 {
+    font-size: 60px;
+    padding: 0 48px;
+}
+.Container .header-item p {
     font-size: 18px;
     width: 450px;
     padding: 0 58px;
 }
-.header-btn{
-    padding: 50px 180px;
+
+.header-btn {
+    padding: 20px 60px;
     background-color: var(--primary-color);
+    text-align: left;
 }
-.header-btn button{
+
+.header-btn button {
     padding: 20px 30px;
     font-size: 20px;
     border-radius: 20px;
+    background-color: var(--fourth-color);
     color: white;
-}
-.Container .header-item h2 span{
-    color: rgb(177, 116, 87);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.header-pic{
-    grid-area: 1 / 2 / 2 / 3;
+.header-btn button:hover {
+    background-color: var(--third-color);
 }
-.header-pic img{
+
+.Container .header-item h2 span {
+    color: var(--fourth-color);
+}
+
+.header-pic {
+    grid-area: 1 / 2 / 2 / 3;
+    text-align: center;
+}
+
+.header-pic img {
     width: 500px;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .Container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .header-item h2 {
+        font-size: 50px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .header-item p {
+        width: auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .header-btn {
+        padding: 30px;
+    }
+
+    .header-pic {
+        margin-top: 20px;
+    }
+
+    .header-pic img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Container {
+        padding: 10px;
+    }
+
+    .header-item h2 {
+        font-size: 40px;
+    }
+
+    .header-item p {
+        font-size: 16px;
+    }
+
+    .header-btn button {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+
+    .header-pic img {
+        width: 200px;
+    }
 }

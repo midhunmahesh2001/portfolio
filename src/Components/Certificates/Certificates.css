@@ -75,10 +75,18 @@
       flex: 1 1 100%;
       max-width: 100%;
     }
-  
+    
+    .mainCertificate img{
+      width: 100%;
+      height: auto;
+    }
     .certificateItem {
       flex: 1 1 calc(50% - 20px); /* Two items per row */
       max-width: calc(50% - 20px);
+    }
+    .certificateItem img{
+      width: 100%;
+      height: auto;
     }
   }
   
@@ -86,6 +94,10 @@
     .certificateItem {
       flex: 1 1 100%; /* One item per row */
       max-width: 100%;
+    }
+    .certificateItem img{
+      width: 100%;
+      height: auto;
     }
   }
   
